@@ -9,8 +9,8 @@
         const path = window.location.pathname;
         
         // If it's the reset password route, redirect to the specific page
-        if (path === '/auth/reset-password') {
-            window.location.href = '/auth/reset-password.html';
+        if (path === '/stories-ai-web/auth/reset-password') {
+            window.location.href = '/stories-ai-web/auth/reset-password.html' + window.location.search;
         } else {
             // For all other routes, redirect to index.html
             window.location.href = '/index.html';
