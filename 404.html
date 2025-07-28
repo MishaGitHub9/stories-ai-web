@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Redirecting...</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script>
+        // GitHub Pages 404.html handler
+        // This will handle all routes and redirect to index.html
+        const path = window.location.pathname;
+        
+        // If it's the reset password route, redirect to the specific page
+        if (path === '/auth/reset-password') {
+            window.location.href = '/auth/reset-password.html';
+        } else {
+            // For all other routes, redirect to index.html
+            window.location.href = '/index.html';
+        }
+    </script>
+</head>
+<body>
+    <p>Redirecting...</p>
+</body>
+</html> 
