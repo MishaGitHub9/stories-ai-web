@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Deep Link</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 600px;
+            margin: 50px auto;
+            padding: 20px;
+            text-align: center;
+        }
+        .button {
+            background-color: #007AFF;
+            color: white;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            margin: 10px;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
+        }
+        .button:hover {
+            background-color: #0056CC;
+        }
+        .info {
+            background-color: #f0f0f0;
+            padding: 15px;
+            border-radius: 8px;
+            margin: 20px 0;
+            text-align: left;
+        }
+    </style>
+</head>
+<body>
+    <h1>🧪 Test Deep Link</h1>
+    
+    <div class="info">
+        <h3>Тестування deep link з параметрами:</h3>
+        <p><strong>access_token:</strong> test_access_token_123</p>
+        <p><strong>refresh_token:</strong> test_refresh_token_456</p>
+        <p><strong>type:</strong> recovery</p>
+    </div>
+
+    <a href="stories.ai://auth/reset-password?access_token=test_access_token_123&refresh_token=test_refresh_token_456&type=recovery" class="button">
+        🔗 Відкрити додаток з параметрами
+    </a>
+
+    <br><br>
+
+    <a href="stories.ai://" class="button">
+        🔗 Відкрити додаток без параметрів
+    </a>
+
+    <br><br>
+
+    <div class="info">
+        <h3>Інструкції:</h3>
+        <ol>
+            <li>Натисніть першу кнопку - вона повинна відкрити додаток на екрані скидання пароля</li>
+            <li>Натисніть другу кнопку - вона повинна відкрити додаток на головному екрані</li>
+            <li>Перевірте логи в консолі додатку</li>
+        </ol>
+    </div>
+
+    <script>
+        // Логуємо кліки для дебагу
+        document.querySelectorAll('.button').forEach(button => {
+            button.addEventListener('click', (e) => {
+                console.log('🔗 Clicked deep link:', e.target.href);
+            });
+        });
+    </script>
+</body>
+</html> 
